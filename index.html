@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- CSS -->
+
+    <style>
+
+        body{
+            background-color: #c3c3c3;
+        }
+
+        #box img{ 
+            width: 150px; 
+            height: 150px;
+            position: absolute; 
+            background: gray; 
+            left: 200px; 
+            top: 200px; 
+        }
+
+    </style>
+
+<!-- ----------------------------------------------------------------- -->
+
+<!-- JAVASCRIPT -->
+
+    <script>
+
+    let boxTop = 200;
+    let boxLeft = 200;
+
+    document.addEventListener('keydown', (event) => {
+    const keyName = event.key;
+    if(keyName === 'ArrowDown'){
+        
+        boxTop +=10
+        //console.log(boxTop)
+        //console.log('keydown event\n\n' + 'key: ' + keyName);
+    }
+    if(keyName === 'ArrowUp'){
+        
+        boxTop -=10
+        //console.log(boxTop)
+        //console.log('keydown event\n\n' + 'key: ' + keyName);
+    }
+    if(keyName === 'ArrowLeft'){
+        
+        boxLeft -=10
+        //console.log(boxLeft)
+        //console.log('keydown event\n\n' + 'key: ' + keyName);
+    }
+    if(keyName === 'ArrowRight'){
+        
+        boxLeft +=10
+        //console.log(boxLeft)
+        //console.log('keydown event\n\n' + 'key: ' + keyName);
+    }
+
+    document.getElementById("box__img").style.top = boxTop + "px";
+    document.getElementById("box__img").style.left = boxLeft + "px";
+    });
+
+    </script>
+
+</head>
+
+<!-- ------------------------------------------------------------------------ -->
+
+<!-- BODY -->
+
+<body>
+
+    <div id="box"><img id="box__img" src="./img/IMG-20171022-WA0009.jpg" alt="imagem"></div>
+
+</body>
+</html>
